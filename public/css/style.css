@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1340px !important;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+span, p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.list-check li::before {
+    content: "";
+    padding-left: 32px;
+    color: #0c7c00;
+    background-image: url(/public/img/check-mark_17013456_2_1.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    list-style: none;
+    font-weight: 600;
+    font-family: Nunito;
+    height: 20px;
+    width: 20px;
+}
+
+.list-cross li::before {
+    content: "";
+    padding-left: 32px;
+    color: #a60003;
+    background-image: url(/public/img/Vector_7.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    list-style: none;
+    font-weight: 600;
+    font-family: Nunito;
+    height: 20px;
+    width: 20px;
+}
+
+.list-check li,
+.list-cross li {
+    display: flex;
+    align-items: center;
+}
+
+
+.accordion-content {
+            transition: max-height 0.5s ease, opacity 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Đủ lớn cho nội dung */
+            opacity: 1;
+        }
+        
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}

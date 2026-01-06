@@ -1,0 +1,11 @@
+npm init -y
+npm install gulp gulp-clean-css gulp-concat --save-dev
+
+npx gulp css
+
+npx gulp watch
+
+
+
+
+
