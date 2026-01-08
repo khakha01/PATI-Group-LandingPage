@@ -46,15 +46,3 @@ faqButtons.forEach((btn) => {
   });
 });
 
-// Hàm include component chung
-function includeComponent(path, elementId) {
-  fetch(path)
-    .then((r) => r.text())
-    .then((html) => {
-      document.getElementById(elementId).innerHTML = html;
-    })
-    .catch((err) => console.error(`Lỗi load ${path}:`, err));
-}
-
-// Gọi hàm cho từng component
-includeComponent("resources/components/header.html", "header");
